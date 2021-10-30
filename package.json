@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "format": "prettier --check . && prettier --write ."
+    "format": "prettier --check . & prettier --write ."
   },
   "husky": {
     "hooks": {

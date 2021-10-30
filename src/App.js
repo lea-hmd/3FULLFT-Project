@@ -4,7 +4,7 @@ import { GlobalStyles } from './components/themes/GlobalStyle';
 import { useDarkMode } from './components/themes/useDarkMode';
 import { lightTheme, darkTheme } from './components/themes/Themes';
 import Toggle from './components/themes/Toggler';
-import ChoixViandes from './views/choix-viandes';
+import ChoixPains from './views/choix-pains';
 
 function App() {
   const [theme, themeToggler] = useDarkMode();
@@ -15,7 +15,7 @@ function App() {
       <div>
         <GlobalStyles />
         <Toggle theme={theme} toggleTheme={themeToggler} />
-        <ChoixViandes></ChoixViandes>
+        <ChoixPains></ChoixPains>
       </div>
     </ThemeProvider>
   );
