@@ -14,7 +14,7 @@ export function CustomCard({ title, imgName }: Props) {
   return (
     <div>
       <img
-        className="img"
+        className='img'
         src={process.env.PUBLIC_URL + '/img/' + imgName + '.png'}
         alt={title}
       />

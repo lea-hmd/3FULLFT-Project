@@ -9,16 +9,16 @@ export default function ChoixViandes() {
 
   return (
     <>
-      <Box component="div">
+      <Box component='div'>
         <Grid
           container
-          justifyContent="center"
+          justifyContent='center'
           spacing={0}
-          direction="row"
-          alignItems="center"
+          direction='row'
+          alignItems='center'
         >
           {viandes.map(({ _id: id, imgName, title }) => (
-            <Box component="div" sx={cardStyle}>
+            <Box component='div' sx={cardStyle}>
               <Grid
                 item
                 xs
