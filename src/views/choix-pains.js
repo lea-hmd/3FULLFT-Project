@@ -9,6 +9,10 @@ export default function ChoixPains() {
 
   return (
     <>
+      <div className='viewTitle'>
+        <h2>Pain maison ou tortilla ?</h2>
+      </div>
+
       <Box component='div'>
         <Grid
           container

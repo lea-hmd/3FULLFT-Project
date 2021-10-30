@@ -1,0 +1,8 @@
+h2 {
+  font-family: 'Fredoka One', cursive;
+}
+
+.viewTitle {
+  display: flex;
+  justify-content: center;
+}

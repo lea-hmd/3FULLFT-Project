@@ -9,6 +9,9 @@ export default function ChoixGarnitures() {
 
   return (
     <>
+      <div className='viewTitle'>
+        <h2>Salade, tomates, oignons ?</h2>
+      </div>
       <Box component='div'>
         <Grid
           container

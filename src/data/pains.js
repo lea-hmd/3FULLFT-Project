@@ -7,8 +7,8 @@ export const painsData = [
   },
   {
     _id: '2',
-    imgName: 'galette',
-    title: 'Galette',
+    imgName: 'tortilla',
+    title: 'Tortilla',
     type: 'Pain',
   },
 ];

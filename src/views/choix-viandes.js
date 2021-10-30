@@ -9,6 +9,9 @@ export default function ChoixViandes() {
 
   return (
     <>
+      <div className='viewTitle'>
+        <h2>Plutôt viande ou tofu ?</h2>
+      </div>
       <Box component='div'>
         <Grid
           container
