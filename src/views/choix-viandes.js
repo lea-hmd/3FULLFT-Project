@@ -1,11 +1,11 @@
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
 import { CustomCard } from '../components/customCard/CustomCard.tsx';
-import { garnituresData } from '../data/garnitures';
+import { viandesData } from '../data/viandes';
 import { cardStyle, selectedCardStyle } from '../components/styles/CardStyles';
 
-export default function ChoixGarnitures() {
-  const garnitures = garnituresData;
+export default function ChoixViandes() {
+  const viandes = viandesData;
 
   return (
     <>
@@ -17,7 +17,7 @@ export default function ChoixGarnitures() {
           direction="row"
           alignItems="center"
         >
-          {garnitures.map(({ _id: id, imgName, title }) => (
+          {viandes.map(({ _id: id, imgName, title }) => (
             <Box component="div" sx={cardStyle}>
               <Grid
                 item
