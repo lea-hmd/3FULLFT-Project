@@ -6,7 +6,7 @@ import srcDMIcon from './darkModeIcon.png';
 
 const Button = styled.button`
   background: ${({ theme }) => theme.background};
-  border: 2px solid ${({ theme }) => theme.toggleBorder};
+  border: 1px solid ${({ theme }) => theme.toggleBorder};
   color: ${({ theme }) => theme.text};
   border-radius: 10px;
   cursor: pointer;

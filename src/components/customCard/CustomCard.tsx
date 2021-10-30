@@ -8,6 +8,8 @@ type Props = {
   category: string;
 };
 
+/*<img src={process.env.PUBLIC_URL + '/img/selectedIcon.png'} className="selectedIcon" alt="selectedIcon"></img>*/
+
 export function CustomCard({ title, imgName }: Props) {
   return (
     <div>
