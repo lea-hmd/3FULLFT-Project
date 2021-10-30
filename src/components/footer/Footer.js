@@ -4,7 +4,11 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <img alt='logo' src={process.env.PUBLIC_URL + '/img/DMFLogo.png'}></img>
+        <img
+          className='footerImg'
+          alt='logo'
+          src={process.env.PUBLIC_URL + '/img/LMFLogo.png'}
+        ></img>
       </footer>
     </>
   );

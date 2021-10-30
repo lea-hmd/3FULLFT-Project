@@ -6,6 +6,7 @@ import { lightTheme, darkTheme } from './components/themes/Themes';
 import Toggle from './components/themes/Toggler';
 import ChoixPains from './views/choix-pains';
 import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 
 function App() {
   const [theme, themeToggler] = useDarkMode();
@@ -16,6 +17,7 @@ function App() {
       <div>
         <GlobalStyles />
         <Toggle theme={theme} toggleTheme={themeToggler} />
+        <Header></Header>
         <ChoixPains></ChoixPains>
         <Footer></Footer>
       </div>

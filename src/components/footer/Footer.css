@@ -4,6 +4,6 @@ footer {
   justify-content: center;
   bottom: 0;
 }
-img {
-  width: 60%;
+.footerImg {
+  width: 50%;
 }
