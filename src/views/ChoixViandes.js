@@ -1,8 +1,9 @@
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
-import { CustomCard } from '../components/customCard/CustomCard.tsx';
+import { CustomCard } from '../components/customCard/CustomCard.js';
 import { viandesData } from '../data/viandes';
 import { cardStyle, selectedCardStyle } from '../components/styles/CardStyles';
+import SelectableCardViande from '../components/selectableCard/SelectableCardViande.js';
 
 export default function ChoixViandes() {
   const viandes = viandesData;
@@ -21,16 +22,9 @@ export default function ChoixViandes() {
           alignItems='center'
         >
           {viandes.map(({ _id: id, imgName, title }) => (
-            <Box component='div' sx={cardStyle}>
-              <Grid
-                item
-                xs
-                style={{ alignItems: 'center', justifyContent: 'center' }}
-                key={id}
-              >
-                <CustomCard imgName={imgName} _id={id} title={title} />
-              </Grid>
-            </Box>
+            <SelectableCardViande imgName={imgName} _id={id} title={title}>
+              
+            </SelectableCardViande>
           ))}
         </Grid>
       </Box>

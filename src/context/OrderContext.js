@@ -73,7 +73,12 @@ function orderReducer(state, action) {
       tmp.push({ kebab: state.order, quantity: 1, id: Date.now() });
       return {
         ...state,
-        order: initialState.order,
+        order: {
+          pain: null,
+          viande: null,
+          garnitures: [],
+          sauces: [],
+        },
         orderCart: tmp,
       };
     }

@@ -1,8 +1,8 @@
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
-import { CustomCard } from '../components/customCard/CustomCard.tsx';
+import { CustomCard } from '../components/customCard/CustomCard.js';
 import { painsData } from '../data/pains';
-import { cardStyle, selectedCardStyle } from '../components/styles/CardStyles';
+import SelectableCardPain from '../components/selectableCard/SelectableCardPain';
 
 export default function ChoixPains() {
   const pains = painsData;
@@ -22,16 +22,10 @@ export default function ChoixPains() {
           alignItems='center'
         >
           {pains.map(({ _id: id, imgName, title }) => (
-            <Box component='div' sx={cardStyle}>
-              <Grid
-                item
-                xs
-                style={{ alignItems: 'center', justifyContent: 'center' }}
-                key={id}
-              >
-                <CustomCard imgName={imgName} _id={id} title={title} />
-              </Grid>
-            </Box>
+            <SelectableCardPain imgName={imgName} _id={id} title={title}>
+                  
+            </SelectableCardPain>
+            
           ))}
         </Grid>
       </Box>
