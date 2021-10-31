@@ -29,7 +29,7 @@ export default function SelectableCardGarniture(props) {
                 key={props.id}
             >
                 <div>
-                    <img>
+                    <img src={process.env.PUBLIC_URL + '/img/' + props.imgName + '.png'}style = {{width: '70%', height: '70%', marginTop: '15px'}}>
                     </img>
                     <h6>
                         {props.title}

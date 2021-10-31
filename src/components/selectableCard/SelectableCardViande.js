@@ -1,13 +1,13 @@
 import React from "react"
 import "./SelectableCard.css"
 import { OrderContext } from "../../context/OrderContext"
-import { cardStyle, selectedCardStyle } from '../../components/styles/CardStyles';
+import { cardStyle} from '../../components/styles/CardStyles';
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
 import { useHistory } from "react-router-dom";
 
 export default function SelectableCardViande(props) {
-    const { orderState, orderDispatch } = React.useContext(OrderContext)
+    const {orderDispatch } = React.useContext(OrderContext)
     let history = useHistory();
     const afterClick = () => {
         orderDispatch({ type: "chooseViande", payload: props.title })
@@ -23,7 +23,7 @@ export default function SelectableCardViande(props) {
                 key={props.id}
             >
                 <div>
-                    <img>
+                    <img src={process.env.PUBLIC_URL + '/img/' + props.imgName + '.png'}style = {{width: '70%', height: '70%', marginTop: '15px'}}>
                     </img>
                     <h6>
                         {props.title}

@@ -1,8 +1,6 @@
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
-import { CustomCard } from '../components/customCard/CustomCard.js';
 import { viandesData } from '../data/viandes';
-import { cardStyle, selectedCardStyle } from '../components/styles/CardStyles';
 import SelectableCardViande from '../components/selectableCard/SelectableCardViande.js';
 
 export default function ChoixViandes() {

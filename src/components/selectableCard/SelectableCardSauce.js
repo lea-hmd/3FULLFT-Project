@@ -1,7 +1,7 @@
 import React from "react"
 import "./SelectableCard.css"
 import { OrderContext } from "../../context/OrderContext"
-import { cardStyle, selectedCardStyle } from '../../components/styles/CardStyles';
+import { cardStyle} from '../../components/styles/CardStyles';
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
 
@@ -31,7 +31,7 @@ export default function SelectableCardGarniture(props) {
                 key={props.id}
             >
                 <div>
-                    <img>
+                    <img src={process.env.PUBLIC_URL + '/img/' + props.imgName + '.png'} style = {{width: '70%', height: '70%', marginTop: '15px'}}>
                     </img>
                     <h6>
                         {props.title}

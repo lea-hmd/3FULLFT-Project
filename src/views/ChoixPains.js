@@ -1,6 +1,5 @@
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
-import { CustomCard } from '../components/customCard/CustomCard.js';
 import { painsData } from '../data/pains';
 import SelectableCardPain from '../components/selectableCard/SelectableCardPain';
 

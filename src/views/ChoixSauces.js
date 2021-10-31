@@ -1,15 +1,13 @@
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
-import { CustomCard } from '../components/customCard/CustomCard.js';
 import { saucesData } from '../data/sauces';
-import { cardStyle, selectedCardStyle } from '../components/styles/CardStyles';
 import SelectableCardSauce from '../components/selectableCard/SelectableCardSauce'
 import { useHistory } from "react-router-dom";
 import { OrderContext } from "../context/OrderContext"
 import React from 'react'
 
 export default function ChoixSauces() {
-  const { orderState, orderDispatch } = React.useContext(OrderContext)
+  const {orderDispatch } = React.useContext(OrderContext)
   const sauces = saucesData;
   let history = useHistory();
   const addToCart = () => {

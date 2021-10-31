@@ -1,5 +1,5 @@
 import React from 'react';
-import { func, string } from 'prop-types';
+import {string } from 'prop-types';
 import styled from 'styled-components';
 import srcLMIcon from './lightModeIcon.png';
 import srcDMIcon from './darkModeIcon.png';
