@@ -11,4 +11,10 @@ export const painsData = [
     title: 'Tortilla',
     type: 'Pain',
   },
+  {
+    _id: '3',
+    imgName: 'baguette',
+    title: 'Baguette',
+    type: 'Pain',
+  },
 ];
