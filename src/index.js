@@ -1,13 +1,13 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { OrderProvider } from '../src/context/OrderContext';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <OrderProvider>
     <App />
-  </React.StrictMode>,
+  </OrderProvider>,
   document.getElementById('root'),
 );
 

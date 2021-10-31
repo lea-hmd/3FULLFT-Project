@@ -3,7 +3,7 @@ import { func, string } from 'prop-types';
 import styled from 'styled-components';
 import srcLMIcon from './lightModeIcon.png';
 import srcDMIcon from './darkModeIcon.png';
-
+import { OrderContext } from '../../context/OrderContext';
 const Button = styled.button`
   background: ${({ theme }) => theme.background};
   border: 1px solid ${({ theme }) => theme.toggleBorder};
@@ -26,11 +26,17 @@ const DarkModeIcon = styled.img`
   width: 1.5rem;
 `;
 DarkModeIcon.defaultProps = { src: srcDMIcon };
-const Toggle = ({ theme, toggleTheme }) => {
+const Toggle = ({ theme }) => {
+  const { orderState, orderDispatch } = React.useContext(OrderContext);
+
   return (
     <>
-      <Button onClick={toggleTheme}>
-        {theme === 'light' ? (
+      <Button
+        onClick={() => {
+          orderDispatch({ type: 'switchTheme', payload: orderState.theme });
+        }}
+      >
+        {orderState.theme === 'light' ? (
           <DarkModeIcon></DarkModeIcon>
         ) : (
           <LightModeIcon></LightModeIcon>
@@ -41,6 +47,5 @@ const Toggle = ({ theme, toggleTheme }) => {
 };
 Toggle.propTypes = {
   theme: string.isRequired,
-  toggleTheme: func.isRequired,
 };
 export default Toggle;
