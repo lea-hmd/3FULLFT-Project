@@ -3,6 +3,7 @@ footer {
   display: flex;
   justify-content: center;
   bottom: 0;
+  pointer-events: none;
 }
 .footerImg {
   width: 50%;

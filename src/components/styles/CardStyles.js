@@ -13,7 +13,7 @@ export const selectedCardStyle = {
   textAlign: 'center',
   width: '150px',
   height: '150px',
-  border: '5px solid',
+  border: '4px solid',
   display: 'flex',
   borderRadius: '15px',
   flexDirection: 'column',
