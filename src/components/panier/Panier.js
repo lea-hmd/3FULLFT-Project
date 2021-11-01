@@ -5,11 +5,19 @@ import { getThemeProps } from '@mui/system';
 import { useHistory } from 'react-router-dom';
 
 export default function Panier() {
+
+    
   let history = useHistory();
 
   const { orderState, orderDispatch } = React.useContext(OrderContext);
   const [cart, setCart] = React.useState(null);
   const [value, setValue] = React.useState(true);
+  console.log(orderState.orderCart)
+
+  const reset = () => {
+      orderDispatch({type: 'cancelAll'})
+      window.location.reload()
+  } 
 
   const changePage = () => {
     history.replace('/préparation-commande');
@@ -67,11 +75,21 @@ export default function Panier() {
       setValue(false);
     }
   });
+
+  if (orderState.orderCart.length !== 0){
   return (
+    
     <div className='Panier'>
         <h2>PANIER</h2>
       {cart}
-      <button onClick={() => changePage()} className='button'>commander</button>
+      <button onClick={() => changePage()} className='button'>Commander</button>
+        <button onClick={() => reset()} className='button'>Reset</button>
     </div>
   );
+  }
+  else {
+      return (
+          <></>
+      )
+  }
 }

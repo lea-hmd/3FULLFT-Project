@@ -11,7 +11,6 @@ export default function SelectableCardViande(props) {
   let history = useHistory();
   const afterClick = () => {
     orderDispatch({ type: 'chooseViande', payload: props.title });
-    history.replace('/choix-garnitures');
   };
 
   return (

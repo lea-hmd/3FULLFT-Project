@@ -4,15 +4,13 @@ import { OrderContext } from '../../context/OrderContext';
 import { cardStyle } from '../../components/styles/CardStyles';
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
-import { useHistory } from 'react-router-dom';
 
 export default function SelectableCardPain(props) {
   const { orderDispatch } = React.useContext(OrderContext);
-  let history = useHistory();
+
 
   const afterClick = () => {
     orderDispatch({ type: 'choosePain', payload: props.title });
-    history.replace('/choix-viandes');
   };
 
   return (

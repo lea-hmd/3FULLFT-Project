@@ -2,10 +2,11 @@ import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
 import { viandesData } from '../data/viandes';
 import SelectableCardViande from '../components/selectableCard/SelectableCardViande.js';
+import { useHistory } from 'react-router-dom';
 
 export default function ChoixViandes() {
   const viandes = viandesData;
-
+  let history = useHistory();
   return (
     <>
       <div className='viewTitle'>
@@ -22,6 +23,7 @@ export default function ChoixViandes() {
           {viandes.map(({ _id: id, title }) => (
             <SelectableCardViande _id={id} title={title}></SelectableCardViande>
           ))}
+          <button onClick={() => history.replace('/choix-garnitures')}>Valider</button>
         </Grid>
       </Box>
     </>

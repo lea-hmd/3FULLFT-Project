@@ -2,10 +2,11 @@ import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
 import { painsData } from '../data/pains';
 import SelectableCardPain from '../components/selectableCard/SelectableCardPain';
+import { useHistory } from 'react-router-dom';
 
 export default function ChoixPains() {
   const pains = painsData;
-
+  let history = useHistory();
   return (
     <>
       <div className='viewTitle'>
@@ -23,6 +24,7 @@ export default function ChoixPains() {
           {pains.map(({ _id: id, title }) => (
             <SelectableCardPain _id={id} title={title}></SelectableCardPain>
           ))}
+          <button onClick={() => history.replace('/choix-viandes')}>Valider</button>
         </Grid>
       </Box>
     </>
