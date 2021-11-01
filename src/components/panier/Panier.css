@@ -1,29 +1,14 @@
 .Panier {
   position: absolute;
   right: 0;
-  height: 70%;
+  height: 65%;
   width: 400px;
   background-color: #fffcf0;
-  z-index: 150;
+  border-radius: 15px;
+  border: solid 1px #4d0302;
   display: flex;
+  padding-left: 15px;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-}
-
-.button {
-  background-color: #4d0302;
-  color: #fff;
-  border-radius: 8px;
-  min-height: 68px;
-  min-width: 170px;
-  border: 1px solid #4d0302;
-  box-sizing: border-box;
-  font-family: Inconsolata;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 25px;
-  text-align: center;
-  margin: 15px 0;
 }

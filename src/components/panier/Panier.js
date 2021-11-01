@@ -49,10 +49,15 @@ export default function Panier() {
           }
           return (
             <div className='element'>
-              <button onClick={() => moreQty(value.id)}>+</button>
-              <button onClick={() => lessQty(value.id, value.quantity)}>
+              <button className='buttonQty' onClick={() => moreQty(value.id)}>
+                +
+              </button>{' '}
+              <button
+                className='buttonQty'
+                onClick={() => lessQty(value.id, value.quantity)}
+              >
                 -
-              </button>
+              </button>{' '}
               {value.kebab.pain +
                 ' / ' +
                 value.kebab.viande +
@@ -75,16 +80,18 @@ export default function Panier() {
 
   if (orderState.orderCart.length !== 0) {
     return (
-      <div className='Panier'>
-        <h2>PANIER</h2>
-        {cart}
-        <button onClick={() => changePage()} className='button'>
-          Commander
-        </button>
-        <button onClick={() => reset()} className='button'>
-          Reset
-        </button>
-      </div>
+      <>
+        <div className='Panier'>
+          <h2>PANIER</h2>
+          {cart}
+          <button onClick={() => changePage()} className='button'>
+            Commander
+          </button>
+          <button onClick={() => reset()} className='button'>
+            Reset
+          </button>
+        </div>
+      </>
     );
   } else {
     return <></>;

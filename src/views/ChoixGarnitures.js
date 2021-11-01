@@ -27,11 +27,16 @@ export default function ChoixGarnitures() {
               title={title}
             ></SelectableCardGarniture>
           ))}{' '}
-          <button onClick={() => history.replace('/choix-sauces')}>
-            VALIDER
-          </button>
         </Grid>
       </Box>
+      <div className='btnContainer'>
+        <button
+          className='button'
+          onClick={() => history.replace('/choix-sauces')}
+        >
+          Valider
+        </button>
+      </div>
     </>
   );
 }

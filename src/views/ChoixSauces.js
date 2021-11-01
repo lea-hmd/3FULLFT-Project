@@ -29,9 +29,13 @@ export default function ChoixSauces() {
           {sauces.map(({ _id: id, title }) => (
             <SelectableCardSauce _id={id} title={title}></SelectableCardSauce>
           ))}
-          <button onClick={commande}>Afficher la commande</button>
         </Grid>
       </Box>
+      <div className='btnContainer'>
+        <button className='button' onClick={commande}>
+          Afficher la commande
+        </button>
+      </div>
     </>
   );
 }

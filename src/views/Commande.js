@@ -42,7 +42,9 @@ export default function Commande() {
             return <SelectableCardSauce title={sauce}></SelectableCardSauce>;
           })
         : null}
-      <button onClick={addToCart}>Valider la commande</button>
+      <button className='button' onClick={addToCart}>
+        Valider la commande
+      </button>
     </>
   );
 }
