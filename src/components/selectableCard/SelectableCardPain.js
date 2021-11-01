@@ -8,7 +8,6 @@ import { Grid } from '@mui/material';
 export default function SelectableCardPain(props) {
   const { orderDispatch } = React.useContext(OrderContext);
 
-
   const afterClick = () => {
     orderDispatch({ type: 'choosePain', payload: props.title });
   };

@@ -23,7 +23,9 @@ export default function ChoixViandes() {
           {viandes.map(({ _id: id, title }) => (
             <SelectableCardViande _id={id} title={title}></SelectableCardViande>
           ))}
-          <button onClick={() => history.replace('/choix-garnitures')}>Valider</button>
+          <button onClick={() => history.replace('/choix-garnitures')}>
+            Valider
+          </button>
         </Grid>
       </Box>
     </>
