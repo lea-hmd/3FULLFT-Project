@@ -9,7 +9,7 @@ import Toggle from '../components/themes/Toggler';
 import PréparationCommande from './PréparationCommande';
 import Panier from '../components/panier/Panier';
 import Commande from './Commande';
-import Easteregg from '../components/easteregg/Easteregg'
+import Easteregg from '../components/easteregg/Easteregg';
 
 function AppStructure() {
   return (
@@ -17,7 +17,7 @@ function AppStructure() {
       <Header></Header>
       <Toggle></Toggle>
       <Panier></Panier>
-      <Easteregg/>
+      <Easteregg />
       <Switch>
         <Route exact path='/' component={ChoixPains} />
         <Route exact path='/choix-pains' component={ChoixPains} />

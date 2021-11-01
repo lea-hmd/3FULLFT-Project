@@ -1,23 +1,23 @@
-import { useState, useEffect, useCallback, useRef } from "react";
-import './Easteregg.css'
+import { useState, useEffect, useCallback, useRef } from 'react';
+import './Easteregg.css';
 
 export default function UseKonamiCode(targetKey) {
-const [konamiCode, setIsKonami] = useState(false);
+  const [konamiCode, setIsKonami] = useState(false);
 
-const refIndex = useRef(0);
+  const refIndex = useRef(0);
 
-  const onKeyUpCallback = useCallback(e => {
+  const onKeyUpCallback = useCallback((e) => {
     const codes = [
-      "ArrowUp",
-      "ArrowUp",
-      "ArrowDown",
-      "ArrowDown",
-      "ArrowLeft",
-      "ArrowRight",
-      "ArrowLeft",
-      "ArrowRight",
-      "b",
-      "a"
+      'ArrowUp',
+      'ArrowUp',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowLeft',
+      'ArrowRight',
+      'ArrowLeft',
+      'ArrowRight',
+      'b',
+      'a',
     ];
     const onKeyUp = ({ key }) => {
       if (refIndex.current === codes.length - 1) {
@@ -37,25 +37,28 @@ const refIndex = useRef(0);
     onKeyUp(e);
   }, []);
 
-  
   useEffect(() => {
-    window.addEventListener("keyup", onKeyUpCallback);
+    window.addEventListener('keyup', onKeyUpCallback);
     return () => {
-      window.removeEventListener("keyup", onKeyUpCallback);
+      window.removeEventListener('keyup', onKeyUpCallback);
     };
   }, [onKeyUpCallback]);
 
-  return (<>
-    {konamiCode ? <div className="cheat">
+  return (
+    <>
+      {konamiCode ? (
+        <div className='cheat'>
           <img src={process.env.PUBLIC_URL + '/img/' + 'ibra' + '.png'}></img>
           <button
+            className='button'
             onClick={() => {
               setIsKonami(false);
             }}
           >
             Fermer
           </button>
-        </div> : null
-      }</>
-  )
+        </div>
+      ) : null}
+    </>
+  );
 }
