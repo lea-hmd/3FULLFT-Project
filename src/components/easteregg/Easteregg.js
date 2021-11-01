@@ -48,7 +48,10 @@ export default function UseKonamiCode(targetKey) {
     <>
       {konamiCode ? (
         <div className='cheat'>
-          <img src={process.env.PUBLIC_URL + '/img/' + 'ibra' + '.png'}></img>
+          <img
+            alt='Ibra Poce Blo'
+            src={process.env.PUBLIC_URL + '/img/ibra.png'}
+          ></img>
           <button
             className='button'
             onClick={() => {

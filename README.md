@@ -8,15 +8,14 @@ Ce concept révolutionnaire permet de configurer et commander son kebab en ligne
 
 ### Installation et lancement du projet
 
-
-* Il est toujours bon de mettre à jour le gestionnaire de paquet npm avant toute chose
+- Il est toujours bon de mettre à jour le gestionnaire de paquet npm avant toute chose
   ```sh
   npm i npm@latest -g
   ```
 
 1. Cloner le projet
    ```sh
-   git clone 
+   git clone
    ```
 2. Installer les dépendances du projet (en lançant la commande dans le dossier racine '3FULLFT_project')
    ```sh
