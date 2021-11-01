@@ -20,12 +20,8 @@ export default function ChoixPains() {
           direction='row'
           alignItems='center'
         >
-          {pains.map(({ key: id, imgName, title }) => (
-            <SelectableCardPain
-              imgName={imgName}
-              _id={id}
-              title={title}
-            ></SelectableCardPain>
+          {pains.map(({ _id: id, title }) => (
+            <SelectableCardPain _id={id} title={title}></SelectableCardPain>
           ))}
         </Grid>
       </Box>

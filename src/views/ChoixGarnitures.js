@@ -20,17 +20,16 @@ export default function ChoixGarnitures() {
           direction='row'
           alignItems='center'
         >
-          {garnitures.map(({ _id: id, imgName, title }) => (
+          {garnitures.map(({ _id: id, title }) => (
             <SelectableCardGarniture
-              imgName={imgName}
               _id={id}
               title={title}
             ></SelectableCardGarniture>
-          ))}
+          ))}{' '}
+          <button onClick={() => history.replace('/choix-sauces')}>
+            VALIDER
+          </button>
         </Grid>
-        <button onClick={() => history.replace('/choix-sauces')}>
-          VALIDER
-        </button>
       </Box>
     </>
   );

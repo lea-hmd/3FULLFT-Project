@@ -19,12 +19,8 @@ export default function ChoixViandes() {
           direction='row'
           alignItems='center'
         >
-          {viandes.map(({ _id: id, imgName, title }) => (
-            <SelectableCardViande
-              imgName={imgName}
-              _id={id}
-              title={title}
-            ></SelectableCardViande>
+          {viandes.map(({ _id: id, title }) => (
+            <SelectableCardViande _id={id} title={title}></SelectableCardViande>
           ))}
         </Grid>
       </Box>

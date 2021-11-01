@@ -19,7 +19,7 @@ export default function SelectableCardViande(props) {
       <Grid item xs className='gridCard' key={props.id}>
         <div>
           <img
-            src={process.env.PUBLIC_URL + '/img/' + props.imgName + '.png'}
+            src={process.env.PUBLIC_URL + '/img/' + props.title + '.png'}
             className='imgCard'
             alt={props.title}
           ></img>
