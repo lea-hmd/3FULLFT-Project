@@ -3,16 +3,13 @@ import { Grid } from '@mui/material';
 import { saucesData } from '../data/sauces';
 import SelectableCardSauce from '../components/selectableCard/SelectableCardSauce';
 import { useHistory } from 'react-router-dom';
-import { OrderContext } from '../context/OrderContext';
 import React from 'react';
 
 export default function ChoixSauces() {
-  const { orderDispatch } = React.useContext(OrderContext);
   const sauces = saucesData;
   let history = useHistory();
-  const addToCart = () => {
-    history.replace('/choix-pains');
-    orderDispatch({ type: 'addOrderToCart' });
+  const commande = () => {
+    history.replace('/commande');
   };
   return (
     <>
@@ -28,15 +25,11 @@ export default function ChoixSauces() {
           direction='row'
           alignItems='center'
         >
-          {sauces.map(({ _id: id, imgName, title }) => (
-            <SelectableCardSauce
-              imgName={imgName}
-              _id={id}
-              title={title}
-            ></SelectableCardSauce>
+          {sauces.map(({ _id: id, title }) => (
+            <SelectableCardSauce _id={id} title={title}></SelectableCardSauce>
           ))}
+          <button onClick={commande}>Afficher la commande</button>
         </Grid>
-        <button onClick={addToCart}>VALIDER</button>
       </Box>
     </>
   );

@@ -6,6 +6,8 @@ import ChoixSauces from './ChoixSauces';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import Toggle from '../components/themes/Toggler';
+import Commande from './Commande';
+import PréparationCommande from './PréparationCommande';
 
 function AppStructure() {
   return (
@@ -18,6 +20,12 @@ function AppStructure() {
         <Route exact path='/choix-viandes' component={ChoixViandes} />
         <Route exact path='/choix-garnitures' component={ChoixGarnitures} />
         <Route exact path='/choix-sauces' component={ChoixSauces} />
+        <Route exact path='/commande' component={Commande} />
+        <Route
+          exact
+          path='/préparation-commande'
+          component={PréparationCommande}
+        />
       </Switch>
       <Footer></Footer>
     </div>
