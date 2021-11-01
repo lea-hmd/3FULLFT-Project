@@ -21,10 +21,11 @@ export default function ChoixPains() {
           alignItems='center'
         >
           {pains.map(({ _id: id, imgName, title }) => (
-            <SelectableCardPain imgName={imgName} _id={id} title={title}>
-                  
-            </SelectableCardPain>
-            
+            <SelectableCardPain
+              imgName={imgName}
+              _id={id}
+              title={title}
+            ></SelectableCardPain>
           ))}
         </Grid>
       </Box>

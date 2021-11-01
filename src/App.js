@@ -8,7 +8,7 @@ import AppStructure from './views/AppStructure';
 import { OrderContext } from '../src/context/OrderContext';
 function App() {
   //const [theme, themeToggler] = useDarkMode();
-  const { orderState, orderDispatch } = React.useContext(OrderContext);
+  const { orderState } = React.useContext(OrderContext);
   const themeMode = orderState.theme === 'light' ? lightTheme : darkTheme;
   return (
     <Router>

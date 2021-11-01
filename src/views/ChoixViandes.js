@@ -20,9 +20,11 @@ export default function ChoixViandes() {
           alignItems='center'
         >
           {viandes.map(({ _id: id, imgName, title }) => (
-            <SelectableCardViande imgName={imgName} _id={id} title={title}>
-              
-            </SelectableCardViande>
+            <SelectableCardViande
+              imgName={imgName}
+              _id={id}
+              title={title}
+            ></SelectableCardViande>
           ))}
         </Grid>
       </Box>

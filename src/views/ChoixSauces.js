@@ -1,19 +1,19 @@
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
 import { saucesData } from '../data/sauces';
-import SelectableCardSauce from '../components/selectableCard/SelectableCardSauce'
-import { useHistory } from "react-router-dom";
-import { OrderContext } from "../context/OrderContext"
-import React from 'react'
+import SelectableCardSauce from '../components/selectableCard/SelectableCardSauce';
+import { useHistory } from 'react-router-dom';
+import { OrderContext } from '../context/OrderContext';
+import React from 'react';
 
 export default function ChoixSauces() {
-  const {orderDispatch } = React.useContext(OrderContext)
+  const { orderDispatch } = React.useContext(OrderContext);
   const sauces = saucesData;
   let history = useHistory();
   const addToCart = () => {
-    history.replace("/choix-pains")
-    orderDispatch({type: 'addOrderToCart'})
-  }
+    history.replace('/choix-pains');
+    orderDispatch({ type: 'addOrderToCart' });
+  };
   return (
     <>
       <div className='viewTitle'>
@@ -28,9 +28,11 @@ export default function ChoixSauces() {
           alignItems='center'
         >
           {sauces.map(({ _id: id, imgName, title }) => (
-            <SelectableCardSauce imgName={imgName} _id={id} title={title}>
-
-            </SelectableCardSauce>
+            <SelectableCardSauce
+              imgName={imgName}
+              _id={id}
+              title={title}
+            ></SelectableCardSauce>
           ))}
         </Grid>
         <button onClick={addToCart}>VALIDER</button>

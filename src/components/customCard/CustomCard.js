@@ -1,11 +1,11 @@
 import './CustomCard.css';
 
 type Props = {
-  _id: string;
-  imgName: string;
-  title: string;
-  type: string;
-  category: string;
+  _id: string,
+  imgName: string,
+  title: string,
+  type: string,
+  category: string,
 };
 
 /*<img src={process.env.PUBLIC_URL + '/img/selectedIcon.png'} className="selectedIcon" alt="selectedIcon"></img>*/
