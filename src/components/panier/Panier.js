@@ -1,7 +1,6 @@
 import React from 'react';
 import './Panier.css';
 import { OrderContext } from '../../context/OrderContext';
-import { getThemeProps } from '@mui/system';
 import { useHistory } from 'react-router-dom';
 
 export default function Panier() {
@@ -21,20 +20,20 @@ export default function Panier() {
     history.replace('/préparation-commande');
   };
 
-  const moreQty = (id) => {
-    orderDispatch({ type: 'increaseQty', payload: id });
-    window.location.reload();
-  };
-  const lessQty = (id, qty) => {
-    if (qty > 1) {
-      orderDispatch({ type: 'decreaseQuantity', payload: id });
-      window.location.reload();
-    } else {
-      orderDispatch({ type: 'deleteOrderFromCart', payload: id });
-      window.location.reload();
-    }
-  };
   React.useEffect(() => {
+    const moreQty = (id) => {
+      orderDispatch({ type: 'increaseQty', payload: id });
+      window.location.reload();
+    };
+    const lessQty = (id, qty) => {
+      if (qty > 1) {
+        orderDispatch({ type: 'decreaseQuantity', payload: id });
+        window.location.reload();
+      } else {
+        orderDispatch({ type: 'deleteOrderFromCart', payload: id });
+        window.location.reload();
+      }
+    };
     const builder = () => {
       setCart(
         orderState.orderCart.map((value, index) => {
@@ -72,7 +71,7 @@ export default function Panier() {
       builder();
       setValue(false);
     }
-  });
+  }, [value, orderDispatch, orderState.orderCart]);
 
   if (orderState.orderCart.length !== 0) {
     return (

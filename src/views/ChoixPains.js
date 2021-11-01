@@ -4,6 +4,7 @@ import { painsData } from '../data/pains';
 import SelectableCardPain from '../components/selectableCard/SelectableCardPain';
 import { useHistory } from 'react-router-dom';
 
+import '../components/styles/card.css';
 export default function ChoixPains() {
   const pains = painsData;
   let history = useHistory();
@@ -13,7 +14,7 @@ export default function ChoixPains() {
         <h2>Pain maison ou tortilla ?</h2>
       </div>
 
-      <Box component='div'>
+      <Box component='div' className='container'>
         <Grid
           container
           justifyContent='center'

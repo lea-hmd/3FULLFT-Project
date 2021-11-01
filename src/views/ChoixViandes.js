@@ -4,6 +4,7 @@ import { viandesData } from '../data/viandes';
 import SelectableCardViande from '../components/selectableCard/SelectableCardViande.js';
 import { useHistory } from 'react-router-dom';
 
+import '../components/styles/card.css';
 export default function ChoixViandes() {
   const viandes = viandesData;
   let history = useHistory();
@@ -12,7 +13,7 @@ export default function ChoixViandes() {
       <div className='viewTitle'>
         <h2>Plutôt viande ou tofu ?</h2>
       </div>
-      <Box component='div'>
+      <Box component='div' className='container'>
         <Grid
           container
           justifyContent='center'

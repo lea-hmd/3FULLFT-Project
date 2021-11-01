@@ -4,6 +4,7 @@ import { saucesData } from '../data/sauces';
 import SelectableCardSauce from '../components/selectableCard/SelectableCardSauce';
 import { useHistory } from 'react-router-dom';
 import React from 'react';
+import '../components/styles/card.css';
 
 export default function ChoixSauces() {
   const sauces = saucesData;
@@ -17,7 +18,7 @@ export default function ChoixSauces() {
         <h2>Quelques sauces ?</h2>
       </div>
 
-      <Box component='div'>
+      <Box component='div' className='container'>
         <Grid
           container
           justifyContent='center'

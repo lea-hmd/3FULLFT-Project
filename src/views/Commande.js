@@ -5,6 +5,7 @@ import SelectableCardViande from '../components/selectableCard/SelectableCardVia
 import SelectableCardGarniture from '../components/selectableCard/SelectableCardGarniture';
 import SelectableCardSauce from '../components/selectableCard/SelectableCardSauce';
 import { OrderContext } from '../context/OrderContext';
+import { cardStyle } from '../components/styles/CardStyles';
 
 export default function Commande() {
   const { orderState, orderDispatch } = React.useContext(OrderContext);

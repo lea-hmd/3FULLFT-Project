@@ -1,20 +1,27 @@
 import React from 'react';
 import './SelectableCard.css';
 import { OrderContext } from '../../context/OrderContext';
-import { cardStyle } from '../../components/styles/CardStyles';
+import {
+  cardStyle,
+  selectedCardStyle,
+} from '../../components/styles/CardStyles';
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
-import { useHistory } from 'react-router-dom';
 
 export default function SelectableCardViande(props) {
-  const { orderDispatch } = React.useContext(OrderContext);
-  let history = useHistory();
+  const { orderState, orderDispatch } = React.useContext(OrderContext);
   const afterClick = () => {
     orderDispatch({ type: 'chooseViande', payload: props.title });
   };
 
   return (
-    <Box component='div' sx={cardStyle} onClick={() => afterClick()}>
+    <Box
+      component='div'
+      sx={
+        orderState.order.viande === props.title ? selectedCardStyle : cardStyle
+      }
+      onClick={() => afterClick()}
+    >
       <Grid item xs className='gridCard' key={props.id}>
         <div>
           <img

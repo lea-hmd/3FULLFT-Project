@@ -4,6 +4,7 @@ import { garnituresData } from '../data/garnitures';
 import SelectableCardGarniture from '../components/selectableCard/SelectableCardGarniture.js';
 import { useHistory } from 'react-router-dom';
 
+import '../components/styles/card.css';
 export default function ChoixGarnitures() {
   const garnitures = garnituresData;
   let history = useHistory();
@@ -12,7 +13,7 @@ export default function ChoixGarnitures() {
       <div className='viewTitle'>
         <h2>Garnitures ?</h2>
       </div>
-      <Box component='div'>
+      <Box component='div' className='container'>
         <Grid
           container
           justifyContent='center'
