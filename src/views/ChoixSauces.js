@@ -19,6 +19,7 @@ export default function ChoixSauces() {
       <div className='viewTitle'>
         <h2>Quelques sauces ?</h2>
       </div>
+
       <Box component='div'>
         <Grid
           container

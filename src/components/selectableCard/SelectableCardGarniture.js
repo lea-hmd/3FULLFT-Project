@@ -18,16 +18,11 @@ export default function SelectableCardGarniture(props) {
 
   return (
     <Box component='div' sx={cardStyle} onClick={afterClick}>
-      <Grid
-        item
-        xs
-        style={{ alignItems: 'center', justifyContent: 'center' }}
-        key={props.id}
-      >
+      <Grid item xs className='gridCard' key={props.id}>
         <div>
           <img
             src={process.env.PUBLIC_URL + '/img/' + props.imgName + '.png'}
-            style={{ width: '70%', height: '70%', marginTop: '15px' }}
+            className='imgCard'
             alt={props.title}
           ></img>
           <h6>{props.title}</h6>

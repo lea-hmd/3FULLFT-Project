@@ -1,0 +1,10 @@
+.imgCard {
+  margin-top: 15px;
+  width: 60%;
+  height: 60%;
+}
+
+.gridCard {
+  align-items: center;
+  justify-content: center;
+}
