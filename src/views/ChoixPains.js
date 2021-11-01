@@ -25,11 +25,16 @@ export default function ChoixPains() {
           {pains.map(({ _id: id, title }) => (
             <SelectableCardPain _id={id} title={title}></SelectableCardPain>
           ))}
-          <button onClick={() => history.replace('/choix-viandes')}>
-            Valider
-          </button>
         </Grid>
       </Box>
+      <div className='btnContainer'>
+        <button
+          className='button'
+          onClick={() => history.replace('/choix-viandes')}
+        >
+          Valider
+        </button>
+      </div>
     </>
   );
 }

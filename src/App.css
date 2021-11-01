@@ -6,3 +6,31 @@ h2 {
   display: flex;
   justify-content: center;
 }
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #4d0302;
+  color: #fff;
+  border-radius: 8px;
+  min-height: 30px;
+  min-width: 120px;
+  border: none;
+  font-family: Inconsolata;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px 0;
+}
+.buttonQty {
+  background-color: #4d0302;
+  color: #fff;
+  border-radius: 5px;
+  min-height: 20px;
+  min-width: 20px;
+  border: none;
+  font-family: Inconsolata;
+  font-size: 15px;
+}

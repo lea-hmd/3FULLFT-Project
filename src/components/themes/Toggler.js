@@ -11,7 +11,7 @@ const Button = styled.button`
   border-radius: 10px;
   cursor: pointer;
   padding-top: 0.2rem;
-  float: right;
+  float: left;
   }
 `;
 
