@@ -13,6 +13,7 @@ export default function ChoixSauces() {
   const addToCart = () => {
     history.replace('/choix-pains');
     orderDispatch({ type: 'addOrderToCart' });
+    window.location.reload();
   };
   return (
     <>
@@ -36,7 +37,7 @@ export default function ChoixSauces() {
             ></SelectableCardSauce>
           ))}
         </Grid>
-        <button onClick={addToCart}>VALIDER</button>
+        <button onClick={() => addToCart()}>VALIDER</button>
       </Box>
     </>
   );

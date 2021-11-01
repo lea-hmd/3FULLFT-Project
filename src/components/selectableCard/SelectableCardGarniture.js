@@ -17,7 +17,7 @@ export default function SelectableCardGarniture(props) {
   };
 
   return (
-    <Box component='div' sx={cardStyle} onClick={afterClick}>
+    <Box component='div' sx={cardStyle} onClick={() => afterClick()}>
       <Grid item xs className='gridCard' key={props.id}>
         <div>
           <img

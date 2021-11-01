@@ -20,7 +20,7 @@ export default function ChoixPains() {
           direction='row'
           alignItems='center'
         >
-          {pains.map(({ _id: id, imgName, title }) => (
+          {pains.map(({ key: id, imgName, title }) => (
             <SelectableCardPain
               imgName={imgName}
               _id={id}

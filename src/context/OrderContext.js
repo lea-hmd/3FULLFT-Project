@@ -1,7 +1,7 @@
 import React from 'react';
 
 const OrderContext = React.createContext();
-const localState = JSON.parse(localStorage.getItem('localState'));
+const localState = JSON.parse(localStorage.getItem('orderState'));
 
 const initialState = {
   order: {
@@ -138,7 +138,7 @@ function OrderProvider({ children }) {
   );
 
   React.useEffect(() => {
-    localStorage.setItem('kebabState', JSON.stringify(orderState));
+    localStorage.setItem('orderState', JSON.stringify(orderState));
   }, [orderState]);
 
   return (
