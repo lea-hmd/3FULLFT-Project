@@ -5,12 +5,19 @@ import SelectableCardSauce from '../components/selectableCard/SelectableCardSauc
 import { useHistory } from 'react-router-dom';
 import React from 'react';
 import '../components/styles/card.css';
+import { OrderContext } from '../context/OrderContext';
 
 export default function ChoixSauces() {
+  const { orderDispatch } = React.useContext(OrderContext);
   const sauces = saucesData;
   let history = useHistory();
   const commande = () => {
     history.replace('/commande');
+  };
+  const resetOrder = () => {
+    orderDispatch({ type: 'resetOrder' });
+    history.replace('/choix-pains');
+    window.location.reload();
   };
   return (
     <>
@@ -32,6 +39,9 @@ export default function ChoixSauces() {
         </Grid>
       </Box>
       <div className='btnContainer'>
+        <button onClick={() => resetOrder()} className='button'>
+          Annuler
+        </button>{' '}
         <button className='button' onClick={commande}>
           Afficher la commande
         </button>

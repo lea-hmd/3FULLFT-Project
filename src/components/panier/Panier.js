@@ -9,10 +9,10 @@ export default function Panier() {
   const { orderState, orderDispatch } = React.useContext(OrderContext);
   const [cart, setCart] = React.useState(null);
   const [value, setValue] = React.useState(true);
-  console.log(orderState.orderCart);
 
   const reset = () => {
     orderDispatch({ type: 'cancelAll' });
+    history.replace('/choix-pains');
     window.location.reload();
   };
 
