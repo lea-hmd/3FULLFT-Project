@@ -15,6 +15,11 @@ export default function Commande() {
     orderDispatch({ type: 'addOrderToCart' });
     window.location.reload();
   };
+  const resetOrder = () => {
+    orderDispatch({ type: 'resetOrder' });
+    history.replace('/choix-pains');
+    window.location.reload();
+  };
   return (
     <>
       {' '}
@@ -45,6 +50,9 @@ export default function Commande() {
           : null}
       </div>{' '}
       <div className='btnContainer'>
+        <button onClick={() => resetOrder()} className='button'>
+          Annuler
+        </button>{' '}
         <button className='button' onClick={addToCart}>
           Valider la commande
         </button>

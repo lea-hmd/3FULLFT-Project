@@ -3,9 +3,17 @@ import { Grid } from '@mui/material';
 import { garnituresData } from '../data/garnitures';
 import SelectableCardGarniture from '../components/selectableCard/SelectableCardGarniture.js';
 import { useHistory } from 'react-router-dom';
-
+import React from 'react';
 import '../components/styles/card.css';
+import { OrderContext } from '../context/OrderContext';
+
 export default function ChoixGarnitures() {
+  const { orderDispatch } = React.useContext(OrderContext);
+  const resetOrder = () => {
+    orderDispatch({ type: 'resetOrder' });
+    history.replace('/choix-pains');
+    window.location.reload();
+  };
   const garnitures = garnituresData;
   let history = useHistory();
   return (
@@ -30,6 +38,9 @@ export default function ChoixGarnitures() {
         </Grid>
       </Box>
       <div className='btnContainer'>
+        <button onClick={() => resetOrder()} className='button'>
+          Annuler
+        </button>{' '}
         <button
           className='button'
           onClick={() => history.replace('/choix-sauces')}

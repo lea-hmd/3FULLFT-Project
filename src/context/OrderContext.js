@@ -60,9 +60,7 @@ function orderReducer(state, action) {
     }
     case 'removeSauce': {
       let tmp = state.order.sauces;
-      console.log(tmp);
       tmp.splice(tmp.indexOf(action.payload), 1);
-      console.log(tmp);
       return {
         ...state,
         order: { ...state.order, sauces: [...tmp] },
