@@ -40,3 +40,18 @@ export const saucesData = [
     type: 'Non Piquante',
   },
 ];
+
+export const buttons = [
+  {
+    name: 'Sauces',
+    value: 'all',
+  },
+  {
+    name: 'Piquantes',
+    value: 'Piquante',
+  },
+  {
+    name: 'Non Piquantes',
+    value: 'Non Piquante',
+  },
+];
