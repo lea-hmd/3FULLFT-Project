@@ -1,15 +1,15 @@
 import { Box } from '@mui/system';
 import { Grid } from '@mui/material';
-import { saucesData } from '../data/sauces';
 import SelectableCardSauce from '../components/selectableCard/SelectableCardSauce';
 import { useHistory } from 'react-router-dom';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../components/styles/card.css';
 import { OrderContext } from '../context/OrderContext';
+import { buttons } from '../data/sauces';
+import { getSauce, filterSauce } from '../services/services';
 
 export default function ChoixSauces() {
-  const { orderDispatch } = React.useContext(OrderContext);
-  const sauces = saucesData;
+  const { orderState, orderDispatch } = React.useContext(OrderContext);
   let history = useHistory();
   const commande = () => {
     history.replace('/commande');
@@ -19,6 +19,19 @@ export default function ChoixSauces() {
     history.replace('/choix-pains');
     window.location.reload();
   };
+
+  const [filtredSauce, setFiltredSauce] = useState(null);
+  useEffect(() => {
+    setFiltredSauce(getSauce());
+  }, []);
+
+  function handleSauce(e) {
+    let typeSauce = e.target.value;
+    typeSauce !== 'all'
+      ? setFiltredSauce(filterSauce(typeSauce))
+      : setFiltredSauce(getSauce());
+  }
+
   return (
     <>
       <div className='viewTitle'>
@@ -33,16 +46,35 @@ export default function ChoixSauces() {
           direction='row'
           alignItems='center'
         >
-          {sauces.map(({ _id: id, title }) => (
-            <SelectableCardSauce _id={id} title={title}></SelectableCardSauce>
-          ))}
+          {filtredSauce &&
+            filtredSauce.map(({ _id: id, title }) => (
+              <SelectableCardSauce _id={id} title={title}></SelectableCardSauce>
+            ))}
         </Grid>
       </Box>
       <div className='btnContainer'>
-        <button onClick={() => resetOrder()} className='button'>
+        {buttons &&
+          buttons.map((type) => (
+            <>
+              <button
+                className={orderState.theme === 'light' ? 'button' : 'buttonD'}
+                value={type.value}
+                onClick={handleSauce}
+              >
+                {type.name}
+              </button>
+            </>
+          ))}
+        <button
+          onClick={() => resetOrder()}
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
+        >
           Annuler
         </button>{' '}
-        <button className='button' onClick={commande}>
+        <button
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
+          onClick={commande}
+        >
           Afficher la commande
         </button>
       </div>

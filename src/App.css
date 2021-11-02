@@ -24,6 +24,18 @@ h2 {
   text-align: center;
   margin: 10px;
 }
+.buttonD {
+  background-color: #fff6d6;
+  color: #4d0302;
+  border-radius: 8px;
+  min-height: 30px;
+  min-width: 120px;
+  border: none;
+  font-family: Inconsolata;
+  font-size: 15px;
+  text-align: center;
+  margin: 10px;
+}
 .buttonQty {
   background-color: #4d0302;
   color: #fff;
@@ -41,4 +53,42 @@ h2 {
   align-items: center;
   margin: auto;
   width: 700px;
+}
+.divSpinner {
+  width: 100px;
+  height: 70px;
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 2s infinite ease-in-out;
+  animation: sk-rotateplane 2s infinite ease-in-out;
+}
+.imgSpinner {
+  -webkit-animation: sk-rotateplane 2s infinite ease-in-out;
+  animation: sk-rotateplane 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(0px);
+  }
+  50% {
+    -webkit-transform: perspective(0px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(0px) rotateY(180deg) rotateX(180deg);
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(0px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(0px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(0px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(0px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(0px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(0px) rotateX(-180deg) rotateY(-179.9deg);
+  }
 }

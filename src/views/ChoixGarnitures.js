@@ -8,7 +8,7 @@ import '../components/styles/card.css';
 import { OrderContext } from '../context/OrderContext';
 
 export default function ChoixGarnitures() {
-  const { orderDispatch } = React.useContext(OrderContext);
+  const { orderState, orderDispatch } = React.useContext(OrderContext);
   const resetOrder = () => {
     orderDispatch({ type: 'resetOrder' });
     history.replace('/choix-pains');
@@ -38,11 +38,14 @@ export default function ChoixGarnitures() {
         </Grid>
       </Box>
       <div className='btnContainer'>
-        <button onClick={() => resetOrder()} className='button'>
+        <button
+          onClick={() => resetOrder()}
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
+        >
           Annuler
         </button>{' '}
         <button
-          className='button'
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
           onClick={() => history.replace('/choix-sauces')}
         >
           Valider
