@@ -15,7 +15,7 @@ Ce concept révolutionnaire permet de configurer et commander son kebab en ligne
 
 1. Cloner le projet
    ```sh
-   git clone
+   git clone https://github.com/lea-hmd/3FULLFT-Project.git
    ```
 2. Installer les dépendances du projet (en lançant la commande dans le dossier racine '3FULLFT_project')
    ```sh
