@@ -15,7 +15,13 @@ export default function PréparationCommande() {
           direction='row'
           alignItems='center'
         >
-          <img src={process.env.PUBLIC_URL + '/img/viande.png'} alt='broche' />
+          <div className='divSpinner'>
+            <img
+              src={process.env.PUBLIC_URL + '/img/viande.png'}
+              alt='broche'
+              className='imgSpinner'
+            />
+          </div>
         </Grid>
       </Box>
     </>
