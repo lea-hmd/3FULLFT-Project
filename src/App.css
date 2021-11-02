@@ -24,6 +24,18 @@ h2 {
   text-align: center;
   margin: 10px;
 }
+.buttonD {
+  background-color: #fff6d6;
+  color: #4d0302;
+  border-radius: 8px;
+  min-height: 30px;
+  min-width: 120px;
+  border: none;
+  font-family: Inconsolata;
+  font-size: 15px;
+  text-align: center;
+  margin: 10px;
+}
 .buttonQty {
   background-color: #4d0302;
   color: #fff;

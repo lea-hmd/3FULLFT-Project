@@ -50,10 +50,16 @@ export default function Commande() {
           : null}
       </div>{' '}
       <div className='btnContainer'>
-        <button onClick={() => resetOrder()} className='button'>
+        <button
+          onClick={() => resetOrder()}
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
+        >
           Annuler
         </button>{' '}
-        <button className='button' onClick={addToCart}>
+        <button
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
+          onClick={addToCart}
+        >
           Valider la commande
         </button>
       </div>

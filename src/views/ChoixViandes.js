@@ -7,8 +7,9 @@ import { useHistory } from 'react-router-dom';
 
 import '../components/styles/card.css';
 import { OrderContext } from '../context/OrderContext';
+
 export default function ChoixViandes() {
-  const { orderDispatch } = React.useContext(OrderContext);
+  const { orderState, orderDispatch } = React.useContext(OrderContext);
   const viandes = viandesData;
   let history = useHistory();
   const resetOrder = () => {
@@ -35,11 +36,14 @@ export default function ChoixViandes() {
         </Grid>
       </Box>
       <div className='btnContainer'>
-        <button onClick={() => resetOrder()} className='button'>
+        <button
+          onClick={() => resetOrder()}
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
+        >
           Annuler
         </button>{' '}
         <button
-          className='button'
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
           onClick={() => history.replace('/choix-garnitures')}
         >
           Valider

@@ -9,7 +9,7 @@ import { buttons } from '../data/sauces';
 import { getSauce, filterSauce } from '../services/services';
 
 export default function ChoixSauces() {
-  const { orderDispatch } = React.useContext(OrderContext);
+  const { orderState, orderDispatch } = React.useContext(OrderContext);
   let history = useHistory();
   const commande = () => {
     history.replace('/commande');
@@ -57,7 +57,7 @@ export default function ChoixSauces() {
           buttons.map((type) => (
             <>
               <button
-                className='button'
+                className={orderState.theme === 'light' ? 'button' : 'buttonD'}
                 value={type.value}
                 onClick={handleSauce}
               >
@@ -65,10 +65,16 @@ export default function ChoixSauces() {
               </button>
             </>
           ))}
-        <button onClick={() => resetOrder()} className='button'>
+        <button
+          onClick={() => resetOrder()}
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
+        >
           Annuler
         </button>{' '}
-        <button className='button' onClick={commande}>
+        <button
+          className={orderState.theme === 'light' ? 'button' : 'buttonD'}
+          onClick={commande}
+        >
           Afficher la commande
         </button>
       </div>
